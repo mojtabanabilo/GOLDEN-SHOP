@@ -1,0 +1,80 @@
+@import "../../sass/mixin/mixins";
+@import "../../sass/variables/variables";
+
+.subscribe{
+    width: 100%;
+    padding: 30px;
+    @include flex(column, center, center);
+    .text{
+        @include flex(column, center, center);
+        h1{
+            color: $boderColor;
+            font-size: 2rem;
+        }
+        p{
+            color: $paragraphColor;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+    }
+    .input_button{
+        width: 100%;
+        margin-top: 20px;
+        @include flex(row, center, center);
+            .input_section{
+                .input_In{
+                    width: 355px;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: 2px solid $boderColor;
+                    padding: 0 10px;
+                    background: $backgroundMain;
+                    &:hover{
+                        background: #868686;
+                        cursor: pointer;
+                    }
+                    &:focus{
+                        outline: none;
+                        background: #fff;
+                    }
+                    &::placeholder{
+                        font-size: 15px;
+                        
+                    }
+                }
+            }
+        .mouseInside{
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            margin-left: 20px;
+            @include position(relative,_,_,_,_,_);
+            @include flex(row, space-between, center);
+            .bg{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: $boderColor;
+                transition: all 300ms ease-in-out;
+                &:hover{
+                    width: 100%;
+                    transition: all 300ms ease-in-out;
+                    border-radius: 25px;
+                    transform: scaleX(1);
+                }
+            }
+            p{
+                font-size: 1rem;
+                color: $paragraphColor;
+                margin-top: auto;
+                overflow: hidden;
+                font-weight: bold;
+                @include position(absolute,50%,_,_,70%,(-70%, -50%));
+            }
+        }
+    }
+    span{
+        color: #ff4848;
+        margin-top: 10px;
+    }
+}

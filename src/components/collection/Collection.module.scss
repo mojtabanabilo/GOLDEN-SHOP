@@ -1,0 +1,164 @@
+@import "../../sass/mixin/mixins";
+@import "../../sass/variables/variables";
+
+@keyframes btn {
+    from{
+        width: 40px;
+        border-radius: 50%;
+        @include flex(row, center, center);
+    }
+    to{
+        width: 150px;
+        border-radius: 25px;
+        padding: 0 5px;
+        @include flex(_, space-between,_);
+    }
+}
+@keyframes bg {
+    from{
+        width: 40px;
+        border-radius: 50%;
+        @include flex(row, center, center);
+    }
+    to{
+        width: 150px;
+        border-radius: 25px;
+        padding: 0 5px;
+        @include flex(_, space-between,_);
+    }
+}
+@keyframes btn_C {
+    from{
+        width: 150px;
+        border-radius: 25px;
+        padding: 0 5px;
+        @include flex(_, space-between,_);
+    }
+    to{
+        width: 40px;
+        border-radius: 50%;
+        padding: 0;
+        @include flex(row, center, center);
+    }
+}
+@keyframes bg_C {
+    from{
+        width: 40px;
+        padding: 0 5px;
+        @include flex(_, space-between,_);
+    }
+    to{
+        width: 30px;
+        border-radius: 50%;
+        padding: 0;
+        @include flex(row, center, center);
+    }
+}
+
+.collection{
+    width: 85%;
+    height: fit-content;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 30px 0 60px 0;
+    @include flex(column, center, flex-start);
+    h1{
+        color: $boderColor;
+    }
+    .cards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 80px;
+        margin-top: 30px;
+        .card{
+            width: 230px;
+            height: 425px;
+            border: 2px solid $boderColor;
+            border-radius: 20px;
+            @include flex(column, center, center);
+            @include position(relative,_,_,_,_,_);
+            img{
+                width: 170px;
+                height: 290px;
+            }
+            .name, .price{
+                color: #fff;
+                font-size: .8rem;
+                font-weight: 600;
+            }
+            .name{
+                transform: translateY(350%);
+            }
+            .price{
+                transform: translateY(450%);
+            }
+            .btn{
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                border: 2px solid $boderColor;
+                border-radius: 50%;
+                animation: btn_C .5s forwards ease-in;
+                transform: translateY(150%);
+                z-index: 100;
+                background: $backgroundMain;
+                @include flex(row, center, center);
+                .bg{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: $boderColor;
+                    animation: bg_C .5s forwards ease-in;
+                    @include flex(row, center, center);
+                }
+                p{
+                    font-size: .8rem;
+                    color: #000;
+                    font-weight: bold;
+                    @include position(absolute,50%,5%,_,_,(-5%, -50%));
+                }
+            }
+            .btn_t{
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                border: 2px solid $boderColor;
+                border-radius: 50%;
+                animation: btn .5s forwards ease-in;
+                z-index: 100;
+                transform: translateY(150%);
+                background: $backgroundMain;
+                @include flex(row, center, center);
+                @include position(relative,_,_,_,_,_);
+                .bg_t{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: $boderColor;
+                    animation: bg .5s forwards ease-in;
+                    @include flex(row, center, center);
+                }
+                p{
+                    font-size: .8rem;
+                    color: #000;
+                    font-weight: bold;
+                    @include position(absolute,50%,5%,_,_,(-5%, -50%));
+                }
+            }
+        }
+        .new_collection{
+            width: 40px;
+            height: 20px;
+            padding: 3px 10px;
+            background: #ff3636;
+            color: $paragraphColor;
+            font-size: .6rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            @include flex(row, center, center);
+            @include position(absolute,-4%,_,_,10%,(-10%,4%));
+        }
+    }
+}

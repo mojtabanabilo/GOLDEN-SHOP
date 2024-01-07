@@ -1,0 +1,53 @@
+@import "../../sass/mixin/mixins";
+@import "../../sass/variables/variables";
+
+.discount{
+    width: 80%;
+    height: fit-content;
+    padding: 30px;
+    @include flex(row, center, center);
+    img{
+        width: 450px;
+        height: 400px;
+    }
+    .text{
+        h1{
+            color: $boderColor;
+            font-size: 3rem;
+        }
+        p{
+            color: $paragraphColor;
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+        .mouseInside{
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            margin-top: 40px;
+            @include position(relative,_,_,_,_,_);
+            @include flex(row, space-between, center);
+            .bg{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: $boderColor;
+                transition: all 300ms ease-in-out;
+                &:hover{
+                    width: 100%;
+                    transition: all 300ms ease-in-out;
+                    border-radius: 25px;
+                    transform: scaleX(1);
+                }
+            }
+            p{
+                font-size: 1rem;
+                color: $paragraphColor;
+                margin-top: auto;
+                overflow: hidden;
+                font-weight: bold;
+                @include position(absolute,50%,_,_,70%,(-70%, -50%));
+            }
+        }
+    }
+}

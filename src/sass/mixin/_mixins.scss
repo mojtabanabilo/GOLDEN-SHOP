@@ -1,0 +1,19 @@
+@mixin flex($flexDirection, $justifyContent, $alignItem) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+@mixin position($position, $top, $right, $bottom, $left, $translate) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform: translate($translate);
+}
+@mixin mediaQuery($width){
+    @media (max-width: $width) {
+        @content
+    }
+}
