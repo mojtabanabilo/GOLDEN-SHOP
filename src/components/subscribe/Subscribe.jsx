@@ -31,14 +31,14 @@ const Subscribe = () => {
                         value !== "" && <Icon icon="ei:check" style={{
                             fontSize: "25px",
                             color: "#059600",
-                            transform: "translate(-140%, 25%)"
+                            transform: "translate(-140%, 0%)"
                         }}/> 
                     }
                     {
                         touch && value === "" && <Icon icon="solar:danger-circle-outline" style={{
                             fontSize: "20px",
                             color: "#ff1717",
-                            transform: "translate(-140%, 25%)"
+                            transform: "translate(-140%, 0%)"
                         }}/>
                     }
                 </div>

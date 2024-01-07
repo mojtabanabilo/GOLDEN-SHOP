@@ -10,6 +10,7 @@
         h1{
             color: $boderColor;
             font-size: 2rem;
+            text-align: center;
         }
         p{
             color: $paragraphColor;
@@ -21,7 +22,11 @@
         width: 100%;
         margin-top: 20px;
         @include flex(row, center, center);
+        @include mediaQueryMaxWidth(655px){
+            @include flex(column, center, center);
+        }
             .input_section{
+                @include flex(row, center, center);
                 .input_In{
                     width: 355px;
                     height: 40px;
@@ -41,15 +46,21 @@
                         font-size: 15px;
                         
                     }
+                    @include mediaQueryMaxWidth(500px){
+                        width: 250px;
+                    }
                 }
             }
         .mouseInside{
-            width: 200px;
+            width: 150px;
             height: 40px;
             cursor: pointer;
             margin-left: 20px;
             @include position(relative,_,_,_,_,_);
             @include flex(row, space-between, center);
+            @include mediaQueryMaxWidth(655px){
+                margin: 20px 0;
+            }
             .bg{
                 width: 40px;
                 height: 40px;

@@ -14,11 +14,11 @@
 }
 @mixin mediaQueryMaxWidth($width){
     @media (max-width: $width) {
-        @content
+        @content;
     }
 }
 @mixin mediaQueryMinWidth($width){
     @media (min-width: $width) {
-        @content
+        @content;
     }
 }
