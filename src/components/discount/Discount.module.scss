@@ -6,19 +6,37 @@
     height: fit-content;
     padding: 30px;
     @include flex(row, center, center);
+    @include mediaQueryMaxWidth(496px){
+        @include flex(column, center, center);
+    }
     img{
         width: 450px;
         height: 400px;
+        @include mediaQueryMaxWidth(965px){
+            width: 350px;
+            height: 300px;
+        }
+        @include mediaQueryMaxWidth(637px){
+            width: 250px;
+            height: 200px;
+        }
     }
     .text{
+        @include flex(column, center, flex-start);
         h1{
             color: $boderColor;
             font-size: 3rem;
+            @include mediaQueryMaxWidth(965px){
+                font-size: 1.5rem;
+            }
         }
         p{
             color: $paragraphColor;
             font-size: 1.3rem;
             margin-top: 20px;
+            @include mediaQueryMaxWidth(965px){
+                font-size: 0.8rem;
+            }
         }
         .mouseInside{
             width: 200px;
@@ -27,6 +45,9 @@
             margin-top: 40px;
             @include position(relative,_,_,_,_,_);
             @include flex(row, space-between, center);
+            @include mediaQueryMaxWidth(965px){
+                width: 150px;
+            }
             .bg{
                 width: 40px;
                 height: 40px;
