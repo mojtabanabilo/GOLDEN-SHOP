@@ -11,10 +11,10 @@
         height: 400px;
         border: 20px solid $boderColor;
         @include flex(row, center, flex-end);
-        @include mediaQuery(700px){
+        @include mediaQueryMaxWidth(700px){
             height: 200px;
         }
-        @include mediaQuery(400px){
+        @include mediaQueryMaxWidth(400px){
             height: 150px;
             border: 10px solid $boderColor;
         }
@@ -32,11 +32,11 @@
             color: $paragraphColor;
             font-size: 3rem;
             margin-right: 30%;
-            @include mediaQuery(600px){
+            @include mediaQueryMaxWidth(600px){
                 font-size: 2rem;
                 margin-right: 20%;
             }
-            @include mediaQuery(330px){
+            @include mediaQueryMaxWidth(330px){
                 font-size: 1.5rem;
                 margin-right: 15%;
             }
@@ -45,18 +45,18 @@
             font-size: 2rem;
             color: $paragraphColor;
             margin-left: 30%;
-            @include mediaQuery(600px){
+            @include mediaQueryMaxWidth(600px){
                 font-size: 1.2rem;
                 margin-left: 20%;
             }
-            @include mediaQuery(330px){
+            @include mediaQueryMaxWidth(330px){
                 font-size: 0.9rem;
                 margin-left: 15%;
             }
             span{
                 color: $boderColor;
                 text-shadow: 0px 0px 50px $boderColor;
-                @include mediaQuery(600px){
+                @include mediaQueryMaxWidth(600px){
                     text-shadow: 0px 0px 20px $boderColor;
                 }
             }
@@ -69,7 +69,7 @@
         margin-top: 20px;
         @include position(relative,_,_,_,_,_);
         @include flex(row, space-between, center);
-        @include mediaQuery(500px){
+        @include mediaQueryMaxWidth(500px){
             width: 150px;
         }
         .bg{

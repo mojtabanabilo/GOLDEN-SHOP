@@ -12,8 +12,13 @@
     left: $left;
     transform: translate($translate);
 }
-@mixin mediaQuery($width){
+@mixin mediaQueryMaxWidth($width){
     @media (max-width: $width) {
+        @content
+    }
+}
+@mixin mediaQueryMinWidth($width){
+    @media (min-width: $width) {
         @content
     }
 }
