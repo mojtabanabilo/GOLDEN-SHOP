@@ -31,27 +31,37 @@
         h1{
             color: $paragraphColor;
             font-size: 3rem;
-            margin-right: 30%;
-            @include mediaQueryMaxWidth(600px){
-                font-size: 2rem;
-                margin-right: 20%;
+            transform: translateX(-40%);
+            @include mediaQueryMaxWidth(820px){
+                transform: translateX(-30%);
             }
-            @include mediaQueryMaxWidth(330px){
-                font-size: 1.5rem;
-                margin-right: 15%;
+            @include mediaQueryMaxWidth(700px){
+                transform: translateX(-20%);
+            }
+            @include mediaQueryMaxWidth(570px){
+                transform: translateX(-10%);
+            }
+            @include mediaQueryMaxWidth(490px){
+                transform: translateX(0);
+                font-size: 2.2rem;
             }
         }
         p{
             font-size: 2rem;
             color: $paragraphColor;
-            margin-left: 30%;
-            @include mediaQueryMaxWidth(600px){
-                font-size: 1.2rem;
-                margin-left: 20%;
+            transform: translateX(40%);
+            @include mediaQueryMaxWidth(820px){
+                transform: translateX(30%);
             }
-            @include mediaQueryMaxWidth(330px){
-                font-size: 0.9rem;
-                margin-left: 15%;
+            @include mediaQueryMaxWidth(700px){
+                transform: translateX(20%);
+            }
+            @include mediaQueryMaxWidth(570px){
+                transform: translateX(10%);
+            }
+            @include mediaQueryMaxWidth(490px){
+                transform: translateX(0);
+                font-size: 1.2rem;
             }
             span{
                 color: $boderColor;
